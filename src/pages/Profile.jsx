@@ -12,7 +12,7 @@ export default function Profile(){
     if (!token) return navigate('/login');
     (async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/auth/profile', {
+        const res = await fetch('https://ip-backend-nljd.onrender.com/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (!res.ok) {
@@ -34,7 +34,7 @@ export default function Profile(){
 
   const save = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/auth/profile', {
+      const res = await fetch('https://ip-backend-nljd.onrender.com/api/auth/profile', {
         method: 'PUT',
         headers: { 'Content-Type':'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(form)
