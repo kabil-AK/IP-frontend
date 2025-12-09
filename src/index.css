@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=Dancing+Script:wght@400..700&display=swap');
+
+
+body { background: hsl(210, 27%, 88%); }
+.container { margin-top: 40px; }
+
+.asset-regular {
+  font-family: "Asset", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.asset-regular {
+  font-family: "Asset", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  font-family: "asset-regular";
+
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 25px auto;
+  padding: 20px;
+    background: #d1d1d1;
+    border-radius: 20px;
+
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1006a1 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.navbar .btn {
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+
+.navbar .btn-outline-primary {
+  color: #facc15 !important;
+  border-color: #facc15 !important;
+}
+
+.navbar .btn-outline-primary:hover {
+  background-color: #facc15 !important;
+  color: #1f2937 !important;
+  border-color: #e2c653 !important;
+}
+
+
+.navbar .btn-primary {
+  background-color: #e6ca5b !important;
+  border-color: #facc15 !important;
+  color: #1f2937 !important;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #e2ae03 !important;
+  border-color: #f3b334 !important;
+}
+
+.navbar .btn-danger {
+  background-color: #ef4444 !important;
+  border-color: #ef4444 !important;
+  color: white !important;
+}
+
+.navbar .btn-danger:hover {
+  background-color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+ 
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar .btn {
+    width: 100%;
+  }
 }
